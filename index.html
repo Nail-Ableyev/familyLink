@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+</head>
+<link rel="stylesheet" href="styles/sets.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html, body{
+        margin: 0;
+        padding:0;
+    }
+    body {
+        height: 100vh;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    #family-grid {
+        display: grid;
+        /* max-height: 80vh; */
+        grid-template-columns: repeat(4,minmax(10px, 1fr));
+        grid-template-rows: repeat(3,minmax(25vh, 1fr) );
+        gap: 5px;
+
+    }
+    .family-cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        /* min-height: 200px; */
+        border: 1px solid black;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+    }
+
+    .wrapper{
+        height:100%;
+        border: 1px solid green
+    }
+
+    .active{
+        border-color: limegreen;
+        background-color: limegreen;
+        border-width: 5px;
+    }
+
+
+    #john{
+        background-image: url(./images/family/John.jpg);
+    }
+
+    #johana {
+        background-image: url(./images/family/Joana.jpg);
+    }
+
+    #mike {
+        background-image: url(./images/family/Mike.jpg);
+    }
+
+    #miley {
+        background-image: url(./images/family/Miliey.jpg);
+    }
+
+    #tony{
+        background-image: url(./images/family/Tony.jpg);
+    }
+
+    #tara{
+        background-image: url(./images/family/Tara.jpg);
+    }
+
+    #betsy{
+        background-image: url(./images/family/Betsy.jpg);
+    }
+
+    #brian{
+        background-image: url(./images/family/Brian.jpg);
+    }
+
+    #cheryl{
+        background-image: url(./images/family/Cheryl.jpg);
+    }
+
+    #charlie{
+        background-image: url(./images/family/Charlie.jpg)
+    }
+
+    
+
+
+</style>
+<body>
+    <main>
+        <section id="family-grid">
+            <div class="no-show" >
+            </div>
+            <div class="family-cell" id="john">
+                <h3 contenteditable  class="overlay-with-text--light">John</h3>
+
+            </div>
+            <div class="family-cell" id="johana">
+                <h3 contenteditable class="overlay-with-text--light">Joana</h3>
+            </div>
+            <div class="no-show" >
+            </div>
+            <div class="family-cell" id="mike">
+                <h3 contenteditable class="overlay-with-text--light">Mike</h3>
+            </div>
+            <div class="family-cell" id="miley">
+                <h3 contenteditable class="overlay-with-text--light">Miliey</h3>
+            </div>
+            <div class="family-cell" id="tony">
+                <h3 contenteditable class="overlay-with-text--light">Tony</h3>
+            </div>
+            <div class="family-cell" id="tara">
+                <h3 contenteditable class="overlay-with-text--light">Tara</h3>
+            </div>
+            <div class="family-cell" id="betsy">
+                <h3 contenteditable class="overlay-with-text--light">Betsy</h3>
+            </div>
+            <div class="family-cell" id="brian">
+                <h3 contenteditable class="overlay-with-text--light">Brian</h3>
+            </div>
+            <div class="family-cell" id="cheryl">
+                <h3 contenteditable class="overlay-with-text--light">Cheryl</h3>
+            </div>
+            <div class="family-cell" id="charlie">
+                <h3 contenteditable class="overlay-with-text--light">Charlie</h3>
+            </div>
+        </section>
+        <section class="overlay-with-text--light"><h2 id="sentence">Click on family members</h2></section>
+
+    </main>
+    <script src="./styles/script.js"></script>
+</body>
+</html>
