@@ -6,172 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family</title>
 </head>
-<link rel="stylesheet" href="styles/sets.css">
-<style>
-    * {
-        box-sizing: border-box;
-    }
-    html, body{
-        margin: 0;
-        padding:0;
-    }
-    body {
-        height: 100vh;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        max-width: 1200px;
-        margin: 0 auto;
-        justify-content: center;
-    }
-    #family-grid {
-        display: grid;
-        /* max-height: 80vh; */
-        grid-template-columns: repeat(4,minmax(10px, 1fr));
-        grid-template-rows: repeat(3,minmax(25vh, 1fr) );
-        gap: 5px;
+<link rel="stylesheet" href="dev/sets.css">
+<link rel="stylesheet" href="dev/styles.css">
 
-    }
-    .family-cell {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        /* min-height: 200px; */
-        border: 1px solid black;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-
-    }
-
-    .wrapper{
-        height:100%;
-        border: 1px solid green
-    }
-
-    .active{
-        border-color: limegreen;
-        background-color: limegreen;
-        border-width: 5px;
-    }
-
-    h2{
-        font-weight: 400;
-    }
-
-    #firstperson, #relative{
-        font-weight: bold;
-    }
-
-
-    #ao1omol{
-        background-image: url(./images/family/1.jpg);
-    }
-
-    #bo1ofolr {
-        background-image: url(./images/family/2.jpg);
-    }
-
-    #co2omol {
-        background-image: url(./images/family/3.jpg);
-    }
-
-    #do2ofor {
-        background-image: url(./images/family/6.jpg);
-    }
-
-    #abo2ofol{
-        background-image: url(./images/family/4.jpg);
-    }
-
-    #abo2omor{
-        background-image: url(./images/family/5.jpg);
-    }
-
-    #abco3ofol{
-        background-image: url(./images/family/7.jpg);
-    }
-
-    #abco3omol{
-        background-image: url(./images/family/8.jpg);
-    }
-
-    #abdo3ofor{
-        background-image: url(./images/family/9.jpg);
-    }
-
-    #abdo3omor{
-        background-image: url(./images/family/10.jpg)
-    }
-
-    
-
-
-</style>
 <body>
     <main>
         <section id="family-grid">
             <div class="no-show" >
             </div>
             <div class="family-cell" id="ao1omolr">
-                <div>
-                    <h3 contenteditable  class="person-name overlay-with-text--light" data-familyid="ao1omolr"></h3>
-                </div>
+                <img  class="person" src="images/family/1.jpg" data-familyid="ao1omolr"/> 
+                <h3 contenteditable  class="person-name overlay-with-text--light" data-familyid="ao1omolr"></h3>
             </div>
             <div class="family-cell" id="bo1ofolr">
-                <div>
+                <img class="person" src="images/family/2.jpg" data-familyid="bo1ofolr"/> 
                 <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="bo1ofolr"></h3>
-                </div>
             </div>
             <div class="no-show" >
             </div>
             <div class="family-cell" id="co2omol">
-                <div>
-                    <h3 contenteditable class=" person-name overlay-with-text--light" data-familyid="co2omol"></h3>
-                </div>
+                <img class="person" src="images/family/3.jpg"  data-familyid="co2omol"/>
+                <h3 contenteditable class=" person-name overlay-with-text--light" data-familyid="co2omol"></h3>
             </div>
             <div class="family-cell" id="abo2ofol">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abo2ofol" ></h3>
-                </div>
+                <img class="person" src="images/family/4.jpg" data-familyid="abo2ofol"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abo2ofol" ></h3>
             </div>
             <div class="family-cell" id="abo2omor">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abo2omor"></h3>
-                </div>
+                <img class="person" src="images/family/5.jpg" data-familyid="abo2omor"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abo2omor"></h3>
             </div>
             <div class="family-cell" id="do2ofor">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="do2ofor"></h3>
-                </div>
+                <img class="person" src="images/family/6.jpg" data-familyid="do2ofor"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="do2ofor"></h3>
             </div>
             <div class="family-cell" id="abco3ofol">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abco3ofol"></h3>
-                </div>
+                <img class="person" src="images/family/7.jpg" data-familyid="abco3ofol"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abco3ofol"></h3>
             </div>
             <div class="family-cell" id="abco3omol">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abco3omol"></h3>
-                </div>
+                <img class="person" src="images/family/8.jpg" data-familyid="abco3omol"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abco3omol"></h3>
             </div>
             <div class="family-cell" id="abdo3ofor">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abdo3ofor"></h3>
-                </div>
+                <img class="person" src="images/family/9.jpg" data-familyid="abdo3ofor"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abdo3ofor"></h3>
             </div>
             <div class="family-cell" id="abdo3omor">
-                <div>
-                    <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abdo3omor"></h3>
-                </div>
+                <img class="person" src="images/family/10.jpg" data-familyid="abdo3omor"/>
+                <h3 contenteditable class="person-name overlay-with-text--light" data-familyid="abdo3omor"></h3>
             </div>
         </section>
-        <section class="overlay-with-text--light"><h2 id="sentence">Click on a family member</h2></section>
+        <section id="sentence" class="overlay-with-text--light"><h2>Click on a family member</h2></section>
         <!-- <section class="overlay-with-text--light"><h2 id="sentence"><span id='firstperson'></span> is <span id='secondPerson'></span><span id="relative" ></span></h2></section> -->
 
     </main>
-    <script src="./styles/script.js"></script>
+    <script src="./dev/script.js"></script>
 </body>
 </html>
+

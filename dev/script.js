@@ -42,8 +42,6 @@ function populator(){
 
 }
 
-
-
 populator()
 
 //the keys in "family" are used to help with logic in comparer function later. id - like a  gene(ab- means a decendant of person a and peson b)
@@ -52,6 +50,12 @@ function divider (inputString){
   const interimArray = inputString.split("o")
   const itemObject = {id: interimArray[0], level: interimArray[1], gender: interimArray[2], branch:interimArray[3]}
   return itemObject
+}
+
+function removeActive(){
+  Array.from(document.querySelectorAll('.person')).forEach((el) => el.classList.remove('active'));
+  counter=0
+  document.getElementById('sentence').innerHTML ="<h2>Click on a family member</h2>"
 }
 
 
@@ -134,9 +138,9 @@ function sentenceMaker(relative){
 
 document.getElementById('family-grid')
 .addEventListener('click', event => {
-  if (event.target.className === 'family-cell') {
+  if (event.target.className === 'person') {
     currentEl=event.target
-    handleClick(currentEl.id);
+    handleClick(currentEl.dataset.familyid);
   }
 });
 
@@ -144,7 +148,6 @@ document.getElementById('family-grid')
   item.addEventListener('keypress', event => {
     if(event.which===13 || event.keyCode===13){
       objectToUse[event.target.dataset.familyid] = event.target.innerText
-      console.log(objectToUse);
       saveToStorage()
       event.target.blur()
     }
@@ -155,10 +158,14 @@ document.getElementById('family-grid')
 [...document.querySelectorAll('.person-name')].forEach(function(item) {
   item.addEventListener('blur', event => {
     objectToUse[event.target.dataset.familyid] = event.target.innerText
-    console.log(objectToUse);
     saveToStorage()
   });
    });
+
+   window.oncontextmenu = (e) => {
+    e.preventDefault()
+    removeActive()
+  }
 
 
 
@@ -177,8 +184,6 @@ function handleClick(cellId){
     }
 
     else {
-        Array.from(document.querySelectorAll('.family-cell')).forEach((el) => el.classList.remove('active'));
-        counter=0
-        document.getElementById('sentence').innerHTML ="Click on a family member"
+      removeActive()
     }
 }
