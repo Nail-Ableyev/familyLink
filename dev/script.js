@@ -58,7 +58,6 @@ function removeActive(){
   document.getElementById('sentence').innerHTML ="<h2>Click on a family member</h2>"
 }
 
-
 //Heavy lifting of deciding relation between first and second person clicked 
 function comparer(){
   const object1=divider(activeOne);
@@ -142,6 +141,9 @@ document.getElementById('family-grid')
     currentEl=event.target
     handleClick(currentEl.dataset.familyid);
   }
+  else{
+    removeActive()
+  }
 });
 
 [...document.querySelectorAll('.person-name')].forEach(function(item) {
@@ -166,8 +168,6 @@ document.getElementById('family-grid')
     e.preventDefault()
     removeActive()
   }
-
-
 
 function handleClick(cellId){
     if (counter===0){
